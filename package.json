@@ -1,0 +1,19 @@
+{
+  "name": "rakuten-ranking-screen-capture",
+  "version": "0.0.1",
+  "description": "Rakuten ranking screen capture",
+  "author": "kengos",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "phantom": "*"
+  },
+  "repository": {},
+  "main": "rakuten-ranking.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT"
+}
