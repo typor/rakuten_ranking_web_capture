@@ -11,9 +11,9 @@
   },
   "repository": {},
   "main": "rakuten-ranking.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=production NODE_PATH=lib node rakuten-ranking.js"
   },
   "license": "MIT"
 }

@@ -1,25 +1,16 @@
 var phantom = require('phantom');
-var settings = [
-  {
-    url: "http://ranking.rakuten.co.jp/",
-    filename: "top20.png"
-  },
-  {
-    url: "http://ranking.rakuten.co.jp/daily/100283/",
-    filename: "洋菓子ランキング.png"
-  }
-];
+var settings = require('./settings');
+var ua = settings.ua;
+var rankingData = settings.rakutenranking;
 
-settings.forEach(function (setting) {
+rankingData.forEach(function (setting) {
   phantom.create(function (ph) {
     ph.createPage(function (page) {
       page.customHeaders = {
-        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.52 Safari/537.36'
+        'User-Agent': ua
       };
       page.viewportSize = { width: 1280, height: 1024 };
       page.paperSize = { width: 21, height: 29.7, border: '0px' };
-
-      console.log(setting);
 
       page.open(setting.url, function (status) {
         if (status !== 'success') {
