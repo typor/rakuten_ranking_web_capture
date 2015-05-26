@@ -1,0 +1,13 @@
+# Rakuten Ranking Web Capture
+
+## Install
+
+```
+npm install
+```
+
+## Usage
+
+```
+npm start
+```
